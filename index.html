@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Portfolio - Jayson</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="icon" href="./myportfolio/assets/images/portfolio-logo.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="./myportfolio/assets/images/portfolio-logo.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./myportfolio/static/css/ndex.css" />
+	<link rel="stylesheet" href="./myportfolio/static/css/web-guide-modal.css" />
+</head>
+<body>
+	<header class="topbar">
+		<div class="logo"><img src="./myportfolio/images/portfolio-logo.png" alt="Logo"></div>
+		<button
+			class="nav-toggle"
+			type="button"
+			aria-label="Open navigation menu"
+			aria-expanded="false"
+			aria-controls="site-nav"
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav id="site-nav">
+			<ul>
+				<li><a class="active" href="#">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Tech Stack</a></li>
+				<li><a href="#portfolio">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+        <!-- Hero Section -->
+		<section class="hero" aria-label="Intro">
+			<div class="hero-left">
+				<h1>Hi I'm Jayson Pardilla</h1>
+					<h2>I'm <span id="role" style="color:var(--accent)"><span id="typed"></span><span class="typed-cursor" aria-hidden="true"></span></span></h2>
+                <p class="lead">
+                I build practical and secure software systems focused on performance, scalability, 
+                and real-world problem solving. Experienced in backend development with Django, 
+                API integration, and creating responsive web applications.
+                </p>
+				<div class="meta">
+					<div>
+
+					</div>
+				</div>		
+
+				<div class="buttons mt-4">
+					<a href="/myportfolio/assets/RESUME.pdf" download="RESUME.pdf" class="btn btn-primary" id="downloadcv">Download CV</a>
+					<button class="btn" id="hire-btn">Hire Me Now!</button>
+				</div>
+
+				<div class="socials" aria-hidden="true">
+					<a class="social" href="https://web.facebook.com/pardilla.jayson.5/" target="_blank" rel="noopener" aria-label="Facebook">
+						<!-- Facebook SVG -->
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.12 8.44 9.93v-7.03H8.08v-2.9h2.36V9.41c0-2.33 1.39-3.62 3.52-3.62.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42v1.7h2.52l-.4 2.9h-2.12v7.03C18.34 21.19 22 17.06 22 12.07z"/></svg>
+					</a>
+					<a class="social" href="https://www.instagram.com/docsonjii?igsh=YXo0N2k1djg0NnB1" target="_blank" rel="noopener" aria-label="Instagram">
+						<!-- Instagram SVG -->
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.9A4.1 4.1 0 1 0 16.1 12 4.1 4.1 0 0 0 12 7.9zm6.4-.9a1.2 1.2 0 1 0 1.2 1.2 1.2 1.2 0 0 0-1.2-1.2zM12 9.4A2.6 2.6 0 1 1 9.4 12 2.6 2.6 0 0 1 12 9.4z"/></svg>
+					</a>
+					<a class="social" href="https://github.com/jaysonpardilla" target="_blank" rel="noopener" aria-label="GitHub">
+						<!-- GitHub SVG -->
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5A12 12 0 0 0 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 1.6 2.9 2.2.1-.8.4-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17.6 6 18.6 6.3 18.6 6.3c.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.7-2.7 5.6-5.3 5.9.4.4.7 1 .7 2v3c0 .4.2.7.8.6A12 12 0 0 0 24 12.5 12 12 0 0 0 12 .5z"/></svg>
+					</a>
+					<a class="social" href="https://www.linkedin.com/in/jayson-pardilla-4a75583b8/" target="_blank" rel="noopener" aria-label="LinkedIn">
+						<!-- LinkedIn SVG -->
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.668-2.237-.909 0-1.451.612-1.688 1.204-.087.212-.109.507-.109.803v5.799h-3.554s.047-9.411 0-10.391h3.554v1.471c.458-.707 1.277-1.713 3.101-1.713 2.264 0 3.962 1.479 3.962 4.662v5.971zM5.337 8.432c-1.144 0-1.881-.758-1.881-1.707 0-.951.737-1.708 1.924-1.708 1.186 0 1.883.757 1.901 1.708 0 .949-.715 1.707-1.944 1.707zm1.536 12.02H3.826V9.06h2.047v11.392zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="hero-right">
+				<div class="profile-container" tabindex="0" role="group" aria-label="Profile composition">
+					<!-- Orbit overlay: two orbiting circles with trailing shadows -->
+					<div class="orbit-overlay" aria-hidden="true">
+						<svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+							<!-- soft blur filter for trail -->
+							<defs>
+								<filter id="blur-soft" x="-50%" y="-50%" width="200%" height="200%">
+									<feGaussianBlur stdDeviation="2" result="b" />
+									<feBlend in="SourceGraphic" in2="b" mode="normal" />
+								</filter>
+							</defs>
+							<!-- Rotor 1: starts at TOP center. Use cy=6 to align dots on the visual border -->
+							<g class="rotor rotor-1">
+								<g class="trail-1-g">
+									<circle class="dot-trail-1" cx="100" cy="6" r="4" />
+								</g>
+								<g class="trail-2-g">
+									<circle class="dot-trail-2" cx="100" cy="6" r="3" />
+								</g>
+								<g class="trail-3-g">
+									<circle class="dot-trail-3" cx="100" cy="6" r="2" />
+								</g>
+								<g class="core-g">
+									<circle class="dot-core" cx="100" cy="6" r="4" />
+								</g>
+							</g>
+							<!-- Rotor 2: same geometry but starts 180deg offset via animation-delay in CSS -->
+							<g class="rotor rotor-2">
+								<g class="trail-1-g">
+									<circle class="dot-trail-1" cx="100" cy="6" r="4" />
+								</g>
+								<g class="trail-2-g">
+									<circle class="dot-trail-2" cx="100" cy="6" r="3" />
+								</g>
+								<g class="trail-3-g">
+									<circle class="dot-trail-3" cx="100" cy="6" r="2" />
+								</g>
+								<g class="core-g">
+									<circle class="dot-core" cx="100" cy="6" r="4" />
+								</g>
+							</g>
+						</svg>
+					</div>
+
+					<div class="profile">
+						<img src="./myportfolio/images/jayson.png" alt="Profile picture of Jayson Pardilla" class="profile-image" />
+					</div>
+				</div>
+			</div>
+            <br>
+            <hr class="divider" style="border:solid ;border-top:1px solid rgba(255, 255, 255, 0.7);margin:40px 0" />
+		</section> 
+        <!-- End hero Section--> 
+
+		<!-- About Section -->
+		<section id="about" class="section" aria-label="About me">
+			<!-- SVG overlay: neon tracing the rounded border only (pointer-events:none) -->
+			<svg class="about-glow" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+				<defs>
+					<!-- soft bloom -->
+					<filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+						<!-- reduced blur for a slimmer neon line -->
+						<feGaussianBlur stdDeviation="4" result="b" />
+						<feMerge>
+							<feMergeNode in="b" />
+							<feMergeNode in="SourceGraphic" />
+						</feMerge>
+					</filter>
+					<!-- neon gradient along stroke -->
+					<linearGradient id="neon-grad" x1="0%" x2="100%" y1="0%" y2="0%">
+						<stop offset="0%" stop-color="rgba(111,255,233,0.95)"/>
+						<stop offset="50%" stop-color="rgba(91,192,190,0.95)"/>
+						<stop offset="100%" stop-color="rgba(111,255,233,0.95)"/>
+					</linearGradient>
+					<!-- mask to remove interior stroke so glow does not cover content -->
+					<mask id="ring-mask">
+						<rect x="0" y="0" width="600" height="400" fill="white" />
+						<!-- inner rect cutout: adjusted inset to match thinner stroke so interior stays clean -->
+						<rect x="6" y="6" width="588" height="388" rx="12" ry="12" fill="black" />
+					</mask>
+				</defs>
+				<!-- base subtle border for depth -->
+				<rect x="3" y="3" width="594" height="394" rx="12" ry="12" fill="none" class="glow-base" />
+				<!-- animated neon stroke; mask limits it to border ring only -->
+				<rect x="3" y="3" width="594" height="394" rx="12" ry="12" fill="none" stroke="url(#neon-grad)" class="glow-path" mask="url(#ring-mask)" />
+			</svg>
+			<div class="about-inner">
+				<div class="about-text mt-4">
+					<h4 class="mb-3">About Me</h3>
+					<p>
+						I am a software developer focused on building secure, and maintainable web applications. 
+						I enjoy solving real-world problems through clean architecture and thoughtful design, turning complex ideas 
+						into simple and functional systems that people can rely on.
+					</p>
+					<p>
+						I’m the kind of developer who prefers to move in silence—constantly learning, experimenting, and improving 
+						behind the scenes. I don’t just write code; I aim to understand how things work deeply, from the logic 
+						behind the system to the experience of the end user.
+					</p>
+					<p>
+						Beyond coding, I enjoy sketching interface ideas, exploring modern design systems, and finding ways to make 
+						applications not just work well, but feel right. I believe that great software is a balance between 
+						functionality, performance, and user experience.
+					</p>
+				</div>
+				<section id="skills" aria-label="Skills" style="padding-left:110px">
+					<aside class="skills-panel mt-0" aria-label="Skills and proficiency">
+					<h4 class="mb-3">My Skills</h4>
+					<div class="skill-progress" data-delay="0" style="--value:95;--duration:1.2s">
+						<strong>Django</strong>
+						<div class="progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">95%</span>
+					</div>  
+					<div class="skill-progress" data-delay="3" style="--value:80;--duration:1.2s">
+						<strong>REST API</strong>
+						<div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">80%</span>
+					</div> 
+					<div class="skill-progress" data-delay="2" style="--value:70;--duration:1.2s">
+						<strong>MySql</strong>
+						<div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">70%</span>
+					</div>
+					<div class="skill-progress" data-delay="3" style="--value:80;--duration:1.2s">
+						<strong>Laravel</strong>
+						<div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">80%</span>
+					</div> 
+					<div class="skill-progress" data-delay="3" style="--value:60;--duration:1.2s">
+						<strong>Flutter</strong>
+						<div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">60%</span>
+					</div>
+					<div class="skill-progress" data-delay="1" style="--value:85;--duration:1.2s">
+						<strong>HTML / CSS</strong>
+						<div class="progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">85%</span>
+					</div>
+					<div class="skill-progress" data-delay="2" style="--value:50;--duration:1.2s">
+						<strong>React</strong>
+						<div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">50%</span>
+					</div>
+					<div class="skill-progress" data-delay="3" style="--value:90;--duration:1.2s">
+						<strong>UI UX using Figma</strong>
+						<div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+							<div class="progress-bar"></div>
+						</div>
+						<span class="percent">90%</span>
+					</div> 
+					</aside>
+				</section>
+			</div>
+		</section>
+		<!-- End about Section--> 
+
+		<!-- Stack Section -->
+		<section id="stack" class="section" aria-label="Stacks">
+			<h4 class="p-3 mb-3 text-center">Tech Stack</h4>
+			<div class="stack-icons" aria-label="Technology stack logos">
+				<img src="./myportfolio/assets/stacks/python.png" alt="Python logo" />
+				<img src="./myportfolio/assets/stacks/django.png" alt="Django logo" />
+				<img src="./myportfolio/assets/stacks/react.png" alt="React logo" />
+				<img src="./myportfolio/assets/stacks/mysql.png" alt="MySQL logo" />
+				<img src="./myportfolio/assets/stacks/php.jpg" alt="PHP logo" />
+				<img src="./myportfolio/assets/stacks/laravel.png" alt="Laravel logo" />
+				<img src="./myportfolio/assets/stacks/flutter.jpg" alt="Flutter logo" />
+				<img src="./myportfolio/assets/stacks/github.png" alt="GitHub logo" />
+				<img src="./myportfolio/assets/stacks/rest.png" alt="REST API logo" />
+			</div>
+		</section>
+
+		<!-- Portfolio Section -->
+		<section id="portfolio" class="section p-2 mt-3 mb-5" aria-label="Portfolio">
+			<h4 class="p-3 mb-3">My Projects</h4>
+			<div class="carousel-3d-container p-4">
+				<button class="carousel-btn prev" aria-label="Previous project">‹</button>
+				<div class="carousel-3d-viewport">
+					<div class="carousel-3d-track"> 
+						<article class="card" style="background-color:#2e3e53;"> 
+							<a href="#" target="_blank" style="text-decoration:none">
+							<img class="image" src="./myportfolio/static/images/2.png" alt="Project screenshot">
+							</a>
+							<h4>Ekubo Marketplace</h4>
+							<p style="color:var(--muted)">Ekubo Marketplace connects local vendors and customers with real-time chat, notifications, and seamless ordering system.</p>
+						</article> 
+						<article class="card" style="background-color:#2e3e53;" role="button" tabindex="0" id="web-guide-card"> 
+							<img class="image" src="./myportfolio/assets/zero-web-guide-images/1.jpg" alt="Web Development Guide">
+							<h4>Web Development Guide</h4>
+							<p style="color:var(--muted)">Learn web development from Python basics to Django applications.</p>
+						</article>
+						<article class="card" style="background-color:#2e3e53;"> 
+							<a href="" target="_blank" style="text-decoration:none">
+								<img class="image" src="./myportfolio/static/images/3.png" alt="Project screenshot">
+							</a>
+							<h4>Inventory with POS System</h4>
+							<p style="color:var(--muted)">Smart Inventory with POS System streamlines stock management, sales tracking, and transactions with real-time updates and reporting.</p>
+						</article>     
+
+						<article class="card" style="background-color:#2e3e53;">
+							<a href="#" target="_blank" style="text-decoration:none">
+							<img class="image" src="./myportfolio/static/images/1.png" alt="Project screenshot">
+							</a>
+							<h4>CBSGMS</h4>
+							<p style="color:var(--muted)">CBSGMS tracks, manages, and supports vulnerable groups through real-time data, reporting, and coordination.</p>
+						</article> 
+						<article class="card" style="background-color:#2e3e53;">
+							<a href="#" target="_blank" style="text-decoration:none">
+							<img class="image" src="./myportfolio/static/images/4.png" alt="Project screenshot">
+							</a>
+							<h4>Snap Sign</h4>
+							<p style="color:var(--muted)">SnapSign enables secure digital signatures, customizable form building, document sending, tracking, and efficient workflow management online.
+</p>
+						</article> 
+					</div>
+				</div>
+				<button class="carousel-btn next" aria-label="Next project">›</button>
+				<div class="carousel-3d-pagination" aria-label="Carousel pagination"></div>
+			</div>
+		</section>
+		<!-- End Portfolio Section --> 
+
+		<!-- Web Guide Modal -->
+		<div id="webGuideModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 id="modalTitle">Web Development Guide</h3>
+					<div class="modal-controls">
+						<button id="zoomBtn" class="modal-icon-btn" aria-label="Fullscreen" title="Fullscreen">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+							</svg>
+						</button>
+						<button class="modal-close" aria-label="Close modal" title="Close (Esc)">&times;</button>
+					</div>
+				</div>
+
+				<div class="modal-body">
+					<div class="image-container">
+						<div class="image-loader" id="imageLoader">
+							<div class="spinner"></div>
+						</div>
+						<img id="modalImage" src="" alt="Web development guide image">
+						<div class="image-navigation">
+							<button class="nav-arrow prev" id="prevBtn" aria-label="Previous image" title="Previous (←)">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="nav-arrow next" id="nextBtn" aria-label="Next image" title="Next (→)">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="modal-thumbnails">
+						<div class="thumbnails-scroll" id="thumbnailsScroll">
+							<!-- Thumbnails will be generated here -->
+						</div>
+					</div>
+
+					<div class="modal-info">
+						<div class="image-counter">
+							<span id="imageCounter">1</span>
+							<span class="separator">/</span>
+							<span id="totalImages">25</span>
+						</div>
+						<div class="progress-bar">
+							<div class="progress-fill" id="progressFill"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<div class="footer-left">
+						<button id="prevImageBtn" class="modal-nav-btn prev-btn" aria-label="Previous image">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<polyline points="15 18 9 12 15 6"></polyline>
+							</svg>
+							<span>Previous</span>
+						</button>
+					</div>
+					<div class="footer-center">
+						<span id="imageInfo" class="image-info">Guide Image</span>
+					</div>
+					<div class="footer-right">
+						<button id="nextImageBtn" class="modal-nav-btn next-btn" aria-label="Next image">
+							<span>Next</span>
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<polyline points="9 18 15 12 9 6"></polyline>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Web Guide Modal -->
+
+		<!-- Contact Section -->
+		<section id="contact" class="section" aria-label="Contact me" style="padding:0; padding-top:80px"> 
+			<div class="mt-0" style="align-items:right;display:flex;flex-direction:column;gap:15px">
+				<h4 class="mt-1">My Contact Information</h4>
+				<div id="contact-form" class="contact-form" action="#" method="post">
+					<div id="contact-msg" role="status" aria-live="polite" style="margin-bottom:12px"></div>
+					<div class="contact-row">
+						<div class="contact-label mr-0">Mobile:</div>
+						<div class="contact-value">
+							<span class="contact-text" style="margin-left: -20px;">09563167462</span>
+							<button type="button" class="copy-btn" data-copy="09563167462" aria-label="Copy mobile number">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<rect x="9" y="9" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"></rect>
+									<path d="M7 15H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="contact-row">
+						<div class="contact-label mr-0">Email:</div>
+						<div class="contact-value">
+							<span class="contact-text" style="margin-left: -20px;">codewithdocsonji16@gmail.com</span>
+							<button type="button" class="copy-btn" data-copy="codewithdocsonji16@gmail.com" aria-label="Copy email address">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<rect x="9" y="9" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"></rect>
+									<path d="M7 15H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="contact-row">
+						<div class="contact-label mr-0">Instagram:</div>
+						<div class="contact-value" style="margin-left: -20px;"><a href="https://www.instagram.com/docsonjii?igsh=YXo0N2k1djg0NnB1" target="_blank">Instagram Link</a></div>
+					</div>
+
+					<div class="contact-row">
+						<div class="contact-label mr-0">Facebook:</div>
+						<div class="contact-value" style="margin-left: -20px;"><a href="https://web.facebook.com/pardilla.jayson.5/" target="_blank">Facebook Link</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Contact Section --> 
+
+		<!-- Footer section -->
+		<footer class="bg-dark m-0 p-3 mt-5" style="margin:0%">
+			<p style='align-items:center; justify-content:center; display:flex'>© 2026 Jayson Pardilla. All Rights Reserved.</p>
+		</footer> 
+		<!-- end footer -->
+
+	</main> 
+
+	<script src="./myportfolio/static/js/typing-animation.js"></script>
+	<script src="./myportfolio/static/js/skill-progressbar.js"></script>
+	<script src="./myportfolio/static/js/ndex.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="./myportfolio/static/js/hire-button.js"></script>
+	<script src="./myportfolio/static/js/entrance-observer.js"></script>
+	<script src="./myportfolio/static/js/submit-form-contact.js"></script>
+	<script src="./myportfolio/static/js/carousel-3d.js"></script>
+	<script src="./myportfolio/static/js/copy-contact.js"></script>
+	<script src="./myportfolio/static/js/web-guide-modal.js"></script>
+</body>
+</html>
