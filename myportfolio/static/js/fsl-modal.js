@@ -15,7 +15,7 @@ class FSLModal {
         this.thumbnailsScroll = document.getElementById('fslThumbnailsScroll');
         
         this.currentImageIndex = 1;
-        this.images = ['onboard.jpg', 'landing.jpg', 'home.jpg', 'about.jpg', 'dictionary1.jpg', 'dictionary2.jpg', 'dictionary3.jpg', 'translator.jpg', 'video_upload.jpg', 'quiz.jpg', 'settings.jpg'];
+        this.images = ['onboard.jpg', 'landing.jpg', 'home.jpg', 'about.jpg', 'dictionary1.jpg', 'dictionary2.jpg', 'dictionary3.jpg', 'translator.jpg', 'video_upload.jpg', 'quiz.jpg', 'settings.jpg', 'contributors.jpg'];
         this.imageDescriptions = [
             'Initial setup guide for new users to familiarize with the app interface.',
             'The first impression of the Filipino Sign Language Translator application with navigation and key features.',
@@ -27,7 +27,8 @@ class FSLModal {
             'Real-time translation tool for converting Filipino Sign Language to text and speech.',
             'Upload video content for sign language translation and analysis.',
             'Interactive quiz to test understanding of Filipino Sign Language.',
-            'Settings page'
+            'Settings page',
+            'Meet the team behind the FSL Translator project.',
         ];
         this.totalImages = this.images.length;
         this.imagePath = './myportfolio/assets/fsl-images/';
