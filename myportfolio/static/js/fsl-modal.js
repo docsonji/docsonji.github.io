@@ -39,6 +39,9 @@ class FSLModal {
     }
     
     init() {
+        // Set total images display
+        this.totalImagesSpan.textContent = this.totalImages;
+        
         // Open modal on card click
         this.fslCard.addEventListener('click', () => this.openModal());
         this.fslCard.addEventListener('keydown', (e) => {
