@@ -50,6 +50,12 @@ class WebGuideModal {
     }
     
     init() {
+        // Check if required elements exist
+        if (!this.webGuideCard || !this.closeBtn || !this.modal) {
+            console.error('WebGuideModal: Required DOM elements not found. Check your HTML IDs.');
+            return;
+        }
+
         // Open modal on card click
         this.webGuideCard.addEventListener('click', () => this.openModal());
         this.webGuideCard.addEventListener('keydown', (e) => {
@@ -68,8 +74,8 @@ class WebGuideModal {
         });
         
         // Navigation buttons
-        this.prevBtn.addEventListener('click', () => this.prevImage());
-        this.nextBtn.addEventListener('click', () => this.nextImage());
+        if (this.prevBtn) this.prevBtn.addEventListener('click', () => this.prevImage());
+        if (this.nextBtn) this.nextBtn.addEventListener('click', () => this.nextImage());
         
         // Touch swipe support
         this.modal.addEventListener('touchstart', (e) => {
@@ -109,6 +115,11 @@ class WebGuideModal {
     }
     
     generateThumbnails() {
+        if (!this.thumbnailsScroll) {
+            console.warn('WebGuideModal: thumbnailsScroll element not found');
+            return;
+        }
+
         const fragment = document.createDocumentFragment();
         
         for (let i = 1; i <= this.totalImages; i++) {
@@ -154,6 +165,11 @@ class WebGuideModal {
     }
     
     openModal() {
+        if (!this.modal) {
+            console.error('WebGuideModal: Modal element not found');
+            return;
+        }
+
         this.currentImageIndex = 1;
         this.loadImage();
         this.modal.style.display = 'flex';
@@ -164,6 +180,11 @@ class WebGuideModal {
     }
     
     closeModal() {
+        if (!this.modal) {
+            console.error('WebGuideModal: Modal element not found');
+            return;
+        }
+
         this.modal.classList.remove('active');
         setTimeout(() => {
             this.modal.style.display = 'none';
@@ -172,6 +193,12 @@ class WebGuideModal {
     }
     
     loadImage() {
+        // Check for required elements
+        if (!this.imageLoader || !this.modalImage || !this.imageCounter || !this.progressFill) {
+            console.warn('WebGuideModal: Some image elements are missing');
+            return;
+        }
+
         // Show loader
         this.imageLoader.style.display = 'flex';
         this.modalImage.style.opacity = '0';
@@ -206,8 +233,8 @@ class WebGuideModal {
         this.progressFill.style.width = progress + '%';
         
         // Update button states
-        this.prevBtn.disabled = this.currentImageIndex === 1;
-        this.nextBtn.disabled = this.currentImageIndex === this.totalImages;
+        if (this.prevBtn) this.prevBtn.disabled = this.currentImageIndex === 1;
+        if (this.nextBtn) this.nextBtn.disabled = this.currentImageIndex === this.totalImages;
         
         // Update thumbnails
         this.updateThumbnailScroll();
@@ -266,11 +293,32 @@ class WebGuideModal {
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+function initWebGuideModal() {
+    const requiredElements = [
+        'webGuideModal',
+        'web-guide-card',
+        'modalImage',
+        'imageCounter',
+        'prevBtn',
+        'nextBtn',
+        'imageLoader',
+        'progressFill',
+        'thumbnailsScroll'
+    ];
+    
+    // Check if all required elements exist before initializing
+    const allElementsExist = requiredElements.every(id => document.getElementById(id));
+    
+    if (allElementsExist) {
         new WebGuideModal();
-    });
+    } else {
+        console.error('WebGuideModal: Not all required DOM elements found. Missing elements will prevent initialization.');
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWebGuideModal);
 } else {
-    new WebGuideModal();
+    initWebGuideModal();
 }
 
