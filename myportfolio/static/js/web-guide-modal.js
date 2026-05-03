@@ -9,12 +9,8 @@ class WebGuideModal {
         this.closeBtn = document.querySelector('.modal-close');
         this.prevBtn = document.getElementById('prevBtn');
         this.nextBtn = document.getElementById('nextBtn');
-        this.prevImageBtn = document.getElementById('prevImageBtn');
-        this.nextImageBtn = document.getElementById('nextImageBtn');
-        this.zoomBtn = document.getElementById('zoomBtn');
         this.imageLoader = document.getElementById('imageLoader');
         this.progressFill = document.getElementById('progressFill');
-        this.imageInfo = document.getElementById('imageInfo');
         this.thumbnailsScroll = document.getElementById('thumbnailsScroll');
         
         this.currentImageIndex = 1;
@@ -22,6 +18,33 @@ class WebGuideModal {
         this.imagePath = './myportfolio/assets/zero-web-guide-images/';
         this.isFullscreen = false;
         this.touchStartX = 0;
+        this.imageDescriptions = [
+            'Introduction to Web Development - Learn the fundamentals of creating websites and web applications.',
+            'HTML Basics - Understanding the structure of web pages using HyperText Markup Language.',
+            'CSS Styling - Master cascading style sheets to design beautiful and responsive layouts.',
+            'JavaScript Fundamentals - Introduction to programming logic and interactivity on the web.',
+            'Responsive Design - Creating websites that work seamlessly across all device sizes.',
+            'Flexbox Layout - Modern CSS flexbox technique for building flexible layouts.',
+            'CSS Grid - Advanced grid system for creating complex page layouts.',
+            'JavaScript DOM Manipulation - Modifying and interacting with HTML elements using JavaScript.',
+            'Event Handling - Capturing and responding to user interactions on web pages.',
+            'AJAX and Fetch API - Asynchronous data fetching and dynamic content loading.',
+            'Form Handling - Creating and validating interactive forms for user input.',
+            'Local Storage - Storing data on the client side using browser storage APIs.',
+            'APIs and Integration - Connecting to external services and data sources.',
+            'Python Introduction - Getting started with Python programming language basics.',
+            'Python Data Types - Working with strings, numbers, lists, and dictionaries.',
+            'Python Functions - Creating reusable code blocks with functions.',
+            'Python Control Flow - Using loops and conditional statements effectively.',
+            'Django Framework Intro - Introduction to the popular Django web framework.',
+            'Django Models - Database design and management with Django ORM.',
+            'Django Views - Creating dynamic content handlers for HTTP requests.',
+            'Django Templates - Building HTML templates with dynamic content.',
+            'Database Basics - Fundamentals of SQL and database design.',
+            'Security Best Practices - Protecting web applications from common vulnerabilities.',
+            'Performance Optimization - Improving website speed and user experience.',
+            'Deployment and Hosting - Publishing your web applications to the internet.'
+        ];
         
         this.init();
     }
@@ -47,11 +70,6 @@ class WebGuideModal {
         // Navigation buttons
         this.prevBtn.addEventListener('click', () => this.prevImage());
         this.nextBtn.addEventListener('click', () => this.nextImage());
-        this.prevImageBtn.addEventListener('click', () => this.prevImage());
-        this.nextImageBtn.addEventListener('click', () => this.nextImage());
-        
-        // Zoom button
-        this.zoomBtn.addEventListener('click', () => this.toggleFullscreen());
         
         // Touch swipe support
         this.modal.addEventListener('touchstart', (e) => {
@@ -82,8 +100,6 @@ class WebGuideModal {
                     this.nextImage();
                 } else if (e.key === 'Escape') {
                     this.closeModal();
-                } else if (e.key === 'f' || e.key === 'F') {
-                    this.toggleFullscreen();
                 }
             }
         });
@@ -152,9 +168,6 @@ class WebGuideModal {
         setTimeout(() => {
             this.modal.style.display = 'none';
             document.body.style.overflow = 'auto';
-            if (this.isFullscreen) {
-                this.toggleFullscreen();
-            }
         }, 300);
     }
     
@@ -181,7 +194,12 @@ class WebGuideModal {
         
         // Update counter and info
         this.imageCounter.textContent = this.currentImageIndex;
-        this.imageInfo.textContent = `Guide Image ${this.currentImageIndex}`;
+        
+        // Update overlay description
+        const overlay = document.getElementById('imageOverlay');
+        if (overlay) {
+            overlay.textContent = this.imageDescriptions[this.currentImageIndex - 1];
+        }
         
         // Update progress bar
         const progress = (this.currentImageIndex / this.totalImages) * 100;
@@ -190,8 +208,6 @@ class WebGuideModal {
         // Update button states
         this.prevBtn.disabled = this.currentImageIndex === 1;
         this.nextBtn.disabled = this.currentImageIndex === this.totalImages;
-        this.prevImageBtn.disabled = this.currentImageIndex === 1;
-        this.nextImageBtn.disabled = this.currentImageIndex === this.totalImages;
         
         // Update thumbnails
         this.updateThumbnailScroll();

@@ -108,10 +108,14 @@
 }
 .carousel-3d-track .card p {
     font-family:var(--font-ui);
-    font-size:var(--fz-base);
+    font-size:0.95rem;
     padding: 0 12px 12px 12px;
     color: var(--text-muted);
     line-height:1.45;
+    text-align:justify;
+}
+#fsl-card:hover {
+    cursor: pointer;
 }
 .carousel-btn {
     background: var(--accent, #6fffe9);
@@ -231,6 +235,108 @@ html{scroll-behavior:smooth}
 /* Smooth micro-interactions */
 .btn, .card{transition:transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), opacity var(--duration) var(--ease)}
 .fade-transition{transition:opacity var(--duration) var(--ease)}
+
+/* ========== Scroll Animation Keyframes ========== */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* ========== Scroll Animation Classes ========== */
+/* Default hidden state for elements before animation */
+#about:not(.scroll-animated),
+#skills:not(.scroll-animated),
+#stack:not(.scroll-animated),
+#portfolio:not(.scroll-animated),
+.about-text:not(.scroll-animated),
+.stack-icons:not(.scroll-animated),
+.carousel-3d-container:not(.scroll-animated) {
+	opacity: 0;
+	transform: translateY(40px);
+}
+
+/* Fade in up animation */
+.scroll-animated.fade-in-up {
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Fade in scale animation */
+.scroll-animated.fade-in-scale {
+	animation: fadeInScale 0.8s ease-out forwards;
+}
+
+/* Slide in left animation */
+.scroll-animated.slide-in-left {
+	animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Slide in right animation */
+.scroll-animated.slide-in-right {
+	animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* ========== Child Element Staggered Animations ========== */
+/* Skill progress bars - hidden by default */
+.skill-progress:not(.bar-animated) {
+	opacity: 0;
+	transform: translateX(-30px);
+}
+
+/* Staggered reveal for skill bars */
+.skill-progress.bar-animated {
+	animation: slideInLeft 0.6s ease-out forwards;
+}
+
+/* Stack icons - hidden by default */
+.stack-icons img:not(.icon-animated) {
+	opacity: 0;
+	transform: scale(0.8);
+}
+
+/* Staggered reveal for stack icons */
+.stack-icons img.icon-animated {
+	animation: fadeInScale 0.5s ease-out forwards;
+}
+
 html,body{height:100%;}
 body{
     margin:0;
@@ -403,7 +509,7 @@ p.lead{color:var(--text-muted);max-width:720px;font-size:var(--fz-base);line-hei
 .about-inner{display:flex;gap:24px;align-items:flex-start}
 .about-text{flex:1}
 /* Stack section logos row */
-.stack-icons{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:nowrap;overflow-x:auto;padding:8px 0}
+.stack-icons{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;overflow:visible;padding:8px 0}
 .stack-icons img{width:100px;height:100px;border-radius:50%;object-fit:cover;display:block}
 /* Justify paragraphs inside the About section only */
 .about-text p{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;word-break:break-word}
@@ -711,7 +817,8 @@ img{max-width:100%;height:auto}
     }
 
     .carousel-3d-track .card p{
-        font-size:0.875rem;
+        font-size:0.95rem;
+        text-align:justify;
     }
 
     .contact-row{

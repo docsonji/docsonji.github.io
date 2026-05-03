@@ -12,6 +12,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./myportfolio/static/css/ndex.css" />
 	<link rel="stylesheet" href="./myportfolio/static/css/web-guide-modal.css" />
+	<link rel="stylesheet" href="./myportfolio/static/css/jayson-ai-chatbot.css" />
 </head>
 <body>
 	<header class="topbar">
@@ -255,13 +256,30 @@
 		<section id="stack" class="section" aria-label="Stacks">
 			<h4 class="p-3 mb-3 text-center">Tech Stack</h4>
 			<div class="stack-icons" aria-label="Technology stack logos">
+				<!-- Programming Languages -->
 				<img src="./myportfolio/assets/stacks/python.png" alt="Python logo" />
-				<img src="./myportfolio/assets/stacks/django.png" alt="Django logo" />
-				<img src="./myportfolio/assets/stacks/react.png" alt="React logo" />
-				<img src="./myportfolio/assets/stacks/mysql.png" alt="MySQL logo" />
 				<img src="./myportfolio/assets/stacks/php.jpg" alt="PHP logo" />
+				<img src="./myportfolio/assets/stacks/dart.png" alt="Dart logo" />
+				
+				<!-- Backend -->
+				<img src="./myportfolio/assets/stacks/django.png" alt="Django logo" />
 				<img src="./myportfolio/assets/stacks/laravel.png" alt="Laravel logo" />
+				<img src="./myportfolio/assets/stacks/firebase.png" alt="Firebase logo" />
+				
+				<!-- Frontend -->
+				<img src="./myportfolio/assets/stacks/react.png" alt="React logo" />
+				<img src="./myportfolio/assets/stacks/bootstrap.jpg" alt="Bootstrap logo" />
+				<img src="./myportfolio/assets/stacks/tailwind.jpg" alt="Tailwind CSS logo" />
+				
+				<!-- Mobile -->
 				<img src="./myportfolio/assets/stacks/flutter.jpg" alt="Flutter logo" />
+				
+				<!-- Databases -->
+				<img src="./myportfolio/assets/stacks/mysql.png" alt="MySQL logo" />
+				<img src="./myportfolio/assets/stacks/postgres.jpg" alt="PostgreSQL logo" />
+				
+				<!-- Version Control & Tools -->
+				<img src="./myportfolio/assets/stacks/git.png" alt="Git logo" />
 				<img src="./myportfolio/assets/stacks/github.png" alt="GitHub logo" />
 				<img src="./myportfolio/assets/stacks/rest.png" alt="REST API logo" />
 			</div>
@@ -274,41 +292,42 @@
 				<button class="carousel-btn prev" aria-label="Previous project">‹</button>
 				<div class="carousel-3d-viewport">
 					<div class="carousel-3d-track"> 
-						<article class="card" style="background-color:#2e3e53;"> 
+						<article class="card" style="background-color:#2e3e53;" title="Click to view"> 
 							<a href="#" target="_blank" style="text-decoration:none">
 							<img class="image" src="./myportfolio/static/images/2.png" alt="Project screenshot">
 							</a>
 							<h4>Ekubo Marketplace</h4>
 							<p style="color:var(--muted)">Ekubo Marketplace connects local vendors and customers with real-time chat, notifications, and seamless ordering system.</p>
 						</article> 
-						<article class="card" style="background-color:#2e3e53;" role="button" tabindex="0" id="web-guide-card"> 
+
+						<article class="card" style="background-color:#2e3e53;" id="fsl-card" title="Click to view">
+							<img class="image" src="./myportfolio/assets/fsl-images/home.jpg" alt="Project screenshot">
+							<h4>Sign Language Translator</h4>
+							<p style="color:var(--muted)"> A mobile app that enhances communication for deaf individuals by providing real-time translation between Filipino Sign Language and spoken Filipino.</p>
+						</article> 
+
+						<article class="card" style="background-color:#2e3e53;" role="button" tabindex="0" id="web-guide-card" title="Click to view"> 
 							<img class="image" src="./myportfolio/assets/zero-web-guide-images/1.jpg" alt="Web Development Guide">
 							<h4>Web Development Guide</h4>
-							<p style="color:var(--muted)">Learn web development from Python basics to Django applications.</p>
+							<p style="color:var(--muted)">A mobile app guide covering web development with Python, from basic concepts to building full applications using Django.</p>
 						</article>
-						<article class="card" style="background-color:#2e3e53;"> 
-							<a href="" target="_blank" style="text-decoration:none">
-								<img class="image" src="./myportfolio/static/images/3.png" alt="Project screenshot">
-							</a>
-							<h4>Inventory with POS System</h4>
-							<p style="color:var(--muted)">Smart Inventory with POS System streamlines stock management, sales tracking, and transactions with real-time updates and reporting.</p>
-						</article>     
 
-						<article class="card" style="background-color:#2e3e53;">
+						<article class="card" style="background-color:#2e3e53;" title="Click to view">
 							<a href="#" target="_blank" style="text-decoration:none">
 							<img class="image" src="./myportfolio/static/images/1.png" alt="Project screenshot">
 							</a>
 							<h4>CBSGMS</h4>
 							<p style="color:var(--muted)">CBSGMS tracks, manages, and supports vulnerable groups through real-time data, reporting, and coordination.</p>
 						</article> 
-						<article class="card" style="background-color:#2e3e53;">
-							<a href="#" target="_blank" style="text-decoration:none">
-							<img class="image" src="./myportfolio/static/images/4.png" alt="Project screenshot">
+
+						<article class="card" style="background-color:#2e3e53;" title="Click to view"> 
+							<a href="" target="_blank" style="text-decoration:none">
+								<img class="image" src="./myportfolio/static/images/3.png" alt="Project screenshot">
 							</a>
-							<h4>Snap Sign</h4>
-							<p style="color:var(--muted)">SnapSign enables secure digital signatures, customizable form building, document sending, tracking, and efficient workflow management online.
-</p>
-						</article> 
+							<h4>Inventory System</h4>
+                            <p style="color:var(--muted)">Smart Inventory with POS System streamlines stock management, sales tracking, and transactions with real-time updates and reporting.</p>
+						</article>
+					
 					</div>
 				</div>
 				<button class="carousel-btn next" aria-label="Next project">›</button>
@@ -338,6 +357,7 @@
 							<div class="spinner"></div>
 						</div>
 						<img id="modalImage" src="" alt="Web development guide image">
+						<div class="image-overlay" id="imageOverlay"></div>
 						<div class="image-navigation">
 							<button class="nav-arrow prev" id="prevBtn" aria-label="Previous image" title="Previous (←)">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -369,31 +389,66 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<!-- End Web Guide Modal -->
 
-				<div class="modal-footer">
-					<div class="footer-left">
-						<button id="prevImageBtn" class="modal-nav-btn prev-btn" aria-label="Previous image">
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<polyline points="15 18 9 12 15 6"></polyline>
-							</svg>
-							<span>Previous</span>
-						</button>
-					</div>
-					<div class="footer-center">
-						<span id="imageInfo" class="image-info">Guide Image</span>
-					</div>
-					<div class="footer-right">
-						<button id="nextImageBtn" class="modal-nav-btn next-btn" aria-label="Next image">
-							<span>Next</span>
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<polyline points="9 18 15 12 9 6"></polyline>
+		<!-- FSL Modal -->
+		<div id="fslModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="fslModalTitle" style="display:none;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 id="fslModalTitle">Filipino Sign Language Translator</h3>
+					<div class="modal-controls">
+						<button id="fslZoomBtn" class="modal-icon-btn" aria-label="Fullscreen" title="Fullscreen">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
 							</svg>
 						</button>
+						<button class="modal-close" aria-label="Close modal" title="Close (Esc)">&times;</button>
+					</div>
+				</div>
+
+				<div class="modal-body">
+					<div class="image-container">
+						<div class="image-loader" id="fslImageLoader">
+							<div class="spinner"></div>
+						</div>
+						<img id="fslModalImage" src="" alt="FSL project image">
+						<div class="image-overlay" id="fslImageOverlay"></div>
+						<div class="image-navigation">
+							<button class="nav-arrow prev" id="fslPrevBtn" aria-label="Previous image" title="Previous (←)">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="15 18 9 12 15 6"></polyline>
+								</svg>
+							</button>
+							<button class="nav-arrow next" id="fslNextBtn" aria-label="Next image" title="Next (→)">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polyline points="9 18 15 12 9 6"></polyline>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="modal-thumbnails">
+						<div class="thumbnails-scroll" id="fslThumbnailsScroll">
+							<!-- Thumbnails will be generated here -->
+						</div>
+					</div>
+
+					<div class="modal-info">
+						<div class="image-counter">
+							<span id="fslImageCounter">1</span>
+							<span class="separator">/</span>
+							<span id="fslTotalImages">11</span>
+						</div>
+						<div class="progress-bar">
+							<div class="progress-fill" id="fslProgressFill"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Web Guide Modal -->
+		<!-- End FSL Modal -->
 
 		<!-- Contact Section -->
 		<section id="contact" class="section" aria-label="Contact me" style="padding:0; padding-top:80px"> 
@@ -455,9 +510,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="./myportfolio/static/js/hire-button.js"></script>
 	<script src="./myportfolio/static/js/entrance-observer.js"></script>
+	<script src="./myportfolio/static/js/scroll-animations.js"></script>
 	<script src="./myportfolio/static/js/submit-form-contact.js"></script>
 	<script src="./myportfolio/static/js/carousel-3d.js"></script>
 	<script src="./myportfolio/static/js/copy-contact.js"></script>
 	<script src="./myportfolio/static/js/web-guide-modal.js"></script>
+	<script src="./myportfolio/static/js/fsl-modal.js"></script>
+	<script src="./myportfolio/static/js/jayson-ai-chatbot.js"></script>
 </body>
 </html>
